@@ -217,7 +217,7 @@
           <input type="text" class="form-control" pattern="[A-Z]{2}\d{3}[A-Z]{2}" placeholder="CD456EF">
         </div>
 
-<div id="bersani-fields" class="hidden">
+        <div id="bersani-fields" class="hidden">
           <div class="mb-3">
             <label class="form-label">Targa Bersani *</label>
             <input type="text" class="form-control" pattern="[A-Z]{2}\d{3}[A-Z]{2}" placeholder="AB123CD">
@@ -287,28 +287,71 @@
         </div>
 
         
-        <h4>Allegati obbligatori</h4>
+        
+        <h4>Convenzioni</h4>
+        <div class="mb-3">
+          <label class="form-label d-block">Seleziona una convenzione</label>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Carabinieri"> Carabinieri</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Esercito"> Esercito</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Areonautica"> Areonautica</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Marina"> Marina</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Vigili del fuoco"> Vigili del fuoco</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Polizia di Stato"> Polizia di Stato</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Ministero della Giustizia"> Ministero della Giustizia</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Guardia di Finanza"> Personale militare Guardia di Finanza</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Personale civile Difesa"> Personale civile dipendente del Ministero della Difesa</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Touring Club Italiano"> Touring Club Italiano</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Federazione Italiana Tennis"> Federazione Italiana Tennis</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Camperisti"> Associazione Nazionale Coordinamento Camperisti</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Magistrati"> Associazione Nazionale Magistrati</div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="convenzione" value="Confcommercio"> Confcommercio</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Seleziona eventuali convenzioni</label>
+          <select class="form-select" multiple>
+            <option>Carabinieri</option>
+            <option>Esercito</option>
+            <option>Areonautica</option>
+            <option>Marina</option>
+            <option>Vigili del fuoco</option>
+            <option>Polizia di Stato</option>
+            <option>Ministero della Giustizia</option>
+            <option>Personale militare Guardia di Finanza</option>
+            <option>Personale civile dipendente del Ministero della Difesa</option>
+            <option>Touring Club Italiano</option>
+            <option>Federazione Italiana Tennis</option>
+            <option>Associazione Nazionale Coordinamento Camperisti</option>
+            <option>Associazione Nazionale Magistrati</option>
+            <option>Confcommercio</option>
+          </select>
+        </div>
+        
+         <h4>Allegati obbligatori</h4>
         <div class="mb-3">
           <label class="form-label">Libretto di circolazione *</label>
-          <input type="file" class="form-control" required>
+          <input type="file" class="form-control" lang="it" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Patente (fronte) *</label>
-          <input type="file" class="form-control" required>
+          <input type="file" class="form-control" lang="it" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Patente (retro) *</label>
-          <input type="file" class="form-control" required>
+          <input type="file" class="form-control" lang="it" required>
         </div>
 
         <div id="stato-famiglia-field" class="mb-3 hidden">
           <label class="form-label">Stato di famiglia (opzionale)</label>
-          <input type="file" class="form-control">
+          <input type="file" class="form-control" lang="it">
         </div>
 
         <div id="modulo-vendita-field" class="mb-3 hidden">
+          <label class="form-label">Documentazione di vendita o rottamazione (opzionale)</label>
+          <input type="file" class="form-control" lang="it" lang="it">
+        </div>
           <label class="form-label">Modulo di vendita/rottamazione (opzionale)</label>
-          <input type="file" class="form-control">
+          <input type="file" class="form-control" lang="it">
         </div>
 
         <button type="submit" class="btn btn-primary">Invia richiesta</button>
