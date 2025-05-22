@@ -35,7 +35,7 @@
     </div>
 
    <div class="form-container">
-      <form name="preventivo-auto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="preventivo-auto" method="POST" netlify>
         <input type="hidden" name="form-name" value="preventivo-auto">
       
         <h4>Dati proprietario del mezzo</h4>
@@ -286,11 +286,11 @@
           <label class="form-label">Patente (retro) *</label>
           <input type="file" name="patente_retro" class="form-control" required>
         </div>
-        <div id="stato-famiglia-field" class="mb-3 hidden">
-          <label class="form-label">Stato di famiglia (opzionale)</label>
+        <div id="stato-famiglia-field" class="mb-3">
+          <label class="form-label">Stato di famiglia se hai scelto Bersani (opzionale)</label>
           <input type="file" name="stato_famiglia" class="form-control">
         </div>
-        <div id="modulo-vendita-field" class="mb-3 hidden">
+        <div id="modulo-vendita-field" class="mb-3">
           <label class="form-label">Documentazione di vendita o rottamazione (opzionale)</label>
           <input type="file" name="documenti_vendita_rottamazione" class="form-control">
         </div>
