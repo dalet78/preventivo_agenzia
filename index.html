@@ -35,33 +35,27 @@
     </div>
 
    <div class="form-container">
-      <form action="https://formbold.com/s/obDGL" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="redirectTo" value="https://dalet78.github.io/preventivo_agenzia/grazie.html">
+     <form action="https://formbold.com/s/obDGL" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="redirectTo" value="https://dalet78.github.io/preventivo_agenzia/grazie.html" formbold-exclude>
+      
         <h4>Dati proprietario del mezzo</h4>
-        <div class="mb-3">
-          <label class="form-label">Nome e Cognome *</label>
-          <input type="text" class="form-control" required pattern="[A-Za-zÀ-ÿ ']{2,}" placeholder="Mario Rossi">
+        <div class="mb-3"><label class="form-label">Nome e Cognome *</label>
+          <input type="text" name="nome_cognome" class="form-control" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Codice Fiscale *</label>
-          <input type="text" class="form-control" required pattern="[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]" placeholder="RSSMRA85T10A562S">
+        <div class="mb-3"><label class="form-label">Codice Fiscale *</label>
+          <input type="text" name="codice_fiscale" class="form-control" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Indirizzo *</label>
-          <input type="text" class="form-control" required placeholder="Via Roma 123">
+        <div class="mb-3"><label class="form-label">Indirizzo *</label>
+          <input type="text" name="indirizzo" class="form-control" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">CAP *</label>
-          <input type="text" class="form-control" required pattern="\d{5}" placeholder="00100">
+        <div class="mb-3"><label class="form-label">CAP *</label>
+          <input type="text" name="cap" class="form-control" required>
         </div>
-       <div class="mb-3">
-          <label class="form-label">Città *</label>
-          <input type="text" class="form-control" required placeholder="Roma">
+        <div class="mb-3"><label class="form-label">Città *</label>
+          <input type="text" name="citta" class="form-control" required>
         </div>
-        
-        <div class="mb-3">
-          <label class="form-label">Provincia *</label>
-          <select class="form-select" required>
+        <div class="mb-3"><label class="form-label">Provincia *</label>
+          <select class="form-select" name="provincia" required>
             <option value="">Seleziona</option>
             <option value="AG">AG</option>
             <option value="AL">AL</option>
@@ -170,113 +164,83 @@
             <option value="VT">VT</option>
           </select>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Telefono *</label>
-          <input type="tel" class="form-control" required pattern="\d{8,12}" placeholder="3201234567">
+        <div class="mb-3"><label class="form-label">Telefono *</label>
+          <input type="tel" name="telefono" class="form-control" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Email *</label>
-           <input type="email" class="form-control" required placeholder="esempio@email.com">
-        </div>        
+        <div class="mb-3"><label class="form-label">Email *</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+      
         <h4>Dati del mezzo</h4>
-        <div class="mb-3">
-          <label class="form-label">Targa *</label>
-          <input type="text" class="form-control" required pattern="[A-Z]{2}\d{3}[A-Z]{2}" placeholder="AB123CD">
+        <div class="mb-3"><label class="form-label">Targa *</label>
+          <input type="text" name="targa" class="form-control" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Marca *</label>
-          <input type="text" class="form-control" required placeholder="Fiat">
+        <div class="mb-3"><label class="form-label">Marca *</label>
+          <input type="text" name="marca" class="form-control" required>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Modello *</label>
-          <input type="text" class="form-control" required placeholder="Panda 1.2">
+        <div class="mb-3"><label class="form-label">Modello *</label>
+          <input type="text" name="modello" class="form-control" required>
         </div>
-
-         
-
+      
         <h4>Situazione assicurativa *</h4>
         <div class="mb-3">
           <div class="form-check">
-            <input class="form-check-input situation" type="radio" name="situazione" id="assicurato" value="precedente" required>
-            <label class="form-check-label" for="assicurato">Precedente assicurato</label>
+            <input class="form-check-input situation" type="radio" name="situazione" value="precedente" required>
+            <label class="form-check-label">Precedente assicurato</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input situation" type="radio" name="situazione" id="bersani" value="bersani">
-            <label class="form-check-label" for="bersani">Nuovo mezzo con decreto Bersani</label>
+            <input class="form-check-input situation" type="radio" name="situazione" value="bersani">
+            <label class="form-check-label">Nuovo mezzo con decreto Bersani</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input situation" type="radio" name="situazione" id="rientro" value="rientro">
-            <label class="form-check-label" for="rientro">Rientro da mezzo venduto o rottamato</label>
+            <input class="form-check-input situation" type="radio" name="situazione" value="rientro">
+            <label class="form-check-label">Rientro da mezzo venduto o rottamato</label>
           </div>
         </div>
-        
+      
         <div id="scadenza-field" class="mb-3 hidden">
           <label class="form-label">Data di scadenza precedente assicurazione *</label>
-          <input type="date" class="form-control">
+          <input type="date" name="data_scadenza" class="form-control">
         </div>
         <div id="targa-vecchia-field" class="mb-3 hidden">
           <label class="form-label">Targa del mezzo venduto o rottamato *</label>
-          <input type="text" class="form-control" pattern="[A-Z]{2}\d{3}[A-Z]{2}" placeholder="CD456EF">
+          <input type="text" name="targa_mezzo_venduto" class="form-control">
         </div>
-
+      
         <div id="bersani-fields" class="hidden">
           <div class="mb-3">
             <label class="form-label">Targa Bersani *</label>
-            <input type="text" class="form-control" pattern="[A-Z]{2}\d{3}[A-Z]{2}" placeholder="AB123CD">
+            <input type="text" name="targa_bersani" class="form-control">
           </div>
           <div class="mb-3">
             <label class="form-label">Nome e Cognome del proprietario *</label>
-            <input type="text" class="form-control" pattern="[A-Za-zÀ-ÿ ']{2,}" placeholder="Giuseppe Verdi">
+            <input type="text" name="nome_proprietario_bersani" class="form-control">
           </div>
           <div class="mb-3">
             <label class="form-label">Data di nascita *</label>
-            <input type="date" class="form-control">
+            <input type="date" name="data_nascita_bersani" class="form-control">
           </div>
         </div>
-
+      
         <h4>Servizi aggiuntivi</h4>
         <div class="mb-3">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Rc e rivalse
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Guida libera
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Guida esperta
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Incendio e furto
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Cristalli
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Atti vandalici
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Fenomeni naturali
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Collisione
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Kasco
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Assistenza stradale
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Tutela legale
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"> Infortuni del conducente
-          </div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Rc e rivalse"> Rc e rivalse</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Guida libera"> Guida libera</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Guida esperta"> Guida esperta</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Incendio e furto"> Incendio e furto</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Cristalli"> Cristalli</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Atti vandalici"> Atti vandalici</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Fenomeni naturali"> Fenomeni naturali</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Collisione"> Collisione</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Kasco"> Kasco</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Assistenza stradale"> Assistenza stradale</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Tutela legale"> Tutela legale</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" name="servizi_aggiuntivi[]" value="Infortuni del conducente"> Infortuni del conducente</div>
         </div>
-
+      
         <h4>Frazionamento pagamento polizza *</h4>
         <div class="mb-3">
-          <select class="form-select" id="frazionamento" required>
+          <select class="form-select" name="frazionamento" id="frazionamento" required>
             <option value="">Seleziona</option>
             <option value="annuale">Annuale</option>
             <option value="semestrale">Semestrale</option>
@@ -284,60 +248,53 @@
           </select>
         </div>
         <div class="mb-3 hidden" id="iban-field">
-          <label class="form-label">IBAN (non obbligatorio, solo a fini amministrativi)</label>
-          <input type="text" class="form-control" placeholder="IT60X0542811101000000123456" pattern="IT\d{2}[A-Z0-9]{1,30}">
+          <label class="form-label">IBAN</label>
+          <input type="text" name="iban" class="form-control">
         </div>
-
-        
-        
+      
         <h4>Convenzioni</h4>
-         <div class="mb-3">
+        <div class="mb-3">
           <label class="form-label">Seleziona eventuali convenzioni</label>
-          <select class="form-select" multiple>
+          <select class="form-select" name="convenzioni[]" multiple>
             <option>Carabinieri</option>
             <option>Esercito</option>
-            <option>Areonautica</option>
+            <option>Aeronautica</option>
             <option>Marina</option>
             <option>Vigili del fuoco</option>
             <option>Polizia di Stato</option>
             <option>Ministero della Giustizia</option>
-            <option>Personale militare Guardia di Finanza</option>
-            <option>Personale civile dipendente del Ministero della Difesa</option>
+            <option>Guardia di Finanza</option>
+            <option>Ministero della Difesa</option>
             <option>Touring Club Italiano</option>
             <option>Federazione Italiana Tennis</option>
-            <option>Associazione Nazionale Coordinamento Camperisti</option>
-            <option>Associazione Nazionale Magistrati</option>
+            <option>Camperisti</option>
+            <option>Magistrati</option>
             <option>Confcommercio</option>
           </select>
         </div>
-        
-         <h4>Allegati obbligatori</h4>
+      
+        <h4>Allegati obbligatori</h4>
         <div class="mb-3">
           <label class="form-label">Libretto di circolazione *</label>
-          <input type="file" class="form-control" lang="it" required>
+          <input type="file" name="libretto" class="form-control" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Patente (fronte) *</label>
-          <input type="file" class="form-control" lang="it" required>
+          <input type="file" name="patente_fronte" class="form-control" required>
         </div>
         <div class="mb-3">
           <label class="form-label">Patente (retro) *</label>
-          <input type="file" class="form-control" lang="it" required>
+          <input type="file" name="patente_retro" class="form-control" required>
         </div>
-
         <div id="stato-famiglia-field" class="mb-3 hidden">
           <label class="form-label">Stato di famiglia (opzionale)</label>
-          <input type="file" class="form-control" lang="it">
+          <input type="file" name="stato_famiglia" class="form-control">
         </div>
-
         <div id="modulo-vendita-field" class="mb-3 hidden">
           <label class="form-label">Documentazione di vendita o rottamazione (opzionale)</label>
-          <input type="file" class="form-control" lang="it" lang="it">
+          <input type="file" name="documenti_vendita_rottamazione" class="form-control">
         </div>
-          <label class="form-label">Modulo di vendita/rottamazione (opzionale)</label>
-          <input type="file" class="form-control" lang="it">
-        </div>
-
+      
         <button type="submit" class="btn btn-primary">Invia richiesta</button>
       </form>
     </div>
