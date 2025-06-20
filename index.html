@@ -273,12 +273,13 @@
           </select>
         </div>
       
-<!--         <h4>Allegati obbligatori</h4>
+       <h4>Allegati obbligatori</h4>
         <div class="mb-3">
           <label class="form-label">Libretto di circolazione *</label>
-          <input type="file" name="libretto" class="form-control" required>
+          <input type="hidden" name="libretto_base64" id="libretto-base64">
+          <input type="file" accept="image/*" id="libretto-file" class="form-control" required>
         </div>
-        <div class="mb-3">
+<!--          <div class="mb-3">
           <label class="form-label">Patente (fronte) *</label>
           <input type="file" name="patente_fronte" class="form-control" required>
         </div>
@@ -329,5 +330,33 @@ const moduloVenditaField = document.getElementById('modulo-vendita-field');
       document.getElementById('iban-field').classList.toggle('hidden', this.value !== 'mensile');
     });
   </script>
+  <script>
+    document.getElementById('libretto-file').addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (!file || !file.type.startsWith('image/')) return;
+    
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = new Image();
+        img.onload = function () {
+          const maxWidth = 600;
+          const scale = maxWidth / img.width;
+          const newWidth = maxWidth;
+          const newHeight = img.height * scale;
+    
+          const canvas = document.createElement('canvas');
+          canvas.width = newWidth;
+          canvas.height = newHeight;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, newWidth, newHeight);
+    
+          const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.6); // qualità 60%
+          document.getElementById('libretto-base64').value = compressedDataUrl;
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+    </script>
 </body>
 </html>
