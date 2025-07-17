@@ -273,11 +273,11 @@
           </select>
         </div>
       
-       <h4>Allegati obbligatori</h4>
+        <h4>Allegati obbligatori</h4>
         <div class="mb-3">
           <label class="form-label">Libretto di circolazione *</label>
-          <input type="hidden" name="libretto_base64" id="libretto-base64">
-          <input type="file" accept="image/*" id="libretto-file" class="form-control" required>
+          <input type="file" name="libretto_originale" accept="image/*" id="libretto-file" class="form-control" required>
+          <input type="hidden" name="libretto_compresso" id="libretto-base64">
         </div>
 <!--          <div class="mb-3">
           <label class="form-label">Patente (fronte) *</label>
