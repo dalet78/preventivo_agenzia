@@ -328,35 +328,51 @@ const moduloVenditaField = document.getElementById('modulo-vendita-field');
 
     document.getElementById('frazionamento').addEventListener('change', function () {
       document.getElementById('iban-field').classList.toggle('hidden', this.value !== 'mensile');
-    });
-  </script>
-  <script>
-    document.getElementById('libretto-file').addEventListener('change', function (event) {
-      const file = event.target.files[0];
-      if (!file || !file.type.startsWith('image/')) return;
-    
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const img = new Image();
-        img.onload = function () {
-          const maxWidth = 600;
-          const scale = maxWidth / img.width;
-          const newWidth = maxWidth;
-          const newHeight = img.height * scale;
-    
-          const canvas = document.createElement('canvas');
-          canvas.width = newWidth;
-          canvas.height = newHeight;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0, newWidth, newHeight);
-    
-          const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.6); // qualità 60%
-          document.getElementById('libretto-base64').value = compressedDataUrl;
+          });
+        </script>
+        <script>
+          document.getElementById('libretto-file').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (!file || !file.type.startsWith('image/')) return;
+      
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = new Image();
+          img.onload = function () {
+            const maxWidth = 600;
+            const scale = Math.min(maxWidth / img.width, maxWidth / img.height);
+            const newWidth = img.width * scale;
+            const newHeight = img.height * scale;
+      
+            const canvas = document.createElement('canvas');
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+            const ctx = canvas.getContext('2d');
+            
+            // Migliore qualità di rendering
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            ctx.drawImage(img, 0, 0, newWidth, newHeight);
+      
+            // Converti in blob e poi in file
+            canvas.toBlob(function(blob) {
+              const compressedFile = new File([blob], file.name, {
+                type: 'image/jpeg',
+                lastModified: Date.now()
+              });
+              
+              // Crea un nuovo input file con il file compresso
+              const dt = new DataTransfer();
+              dt.items.add(compressedFile);
+              document.getElementById('libretto-file').files = dt.files;
+              
+            }, 'image/jpeg', 0.7); // qualità 70%
+          };
+          img.src = e.target.result;
         };
-        img.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    });
+        reader.readAsDataURL(file);
+      });
+
     </script>
 </body>
 </html>
