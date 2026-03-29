@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richiesta Preventivo Auto | Vittoria Assicurazioni</title>
+    <meta
+      name="description"
+      content="Pagina form per richiesta preventivo auto di Vittoria Assicurazioni Sub Portuense Roma 619."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="./index.html" aria-label="Torna alla home">
+          <img src="./logo-vittoria.png" alt="Vittoria Assicurazioni" />
+          <span class="brand-copy">
+            <strong>Sub Portuense Roma 619</strong>
+            <span>Richiesta preventivo auto</span>
+          </span>
+        </a>
+        <a class="button button-primary" href="tel:+390645582068">Chiama ora</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="form-intro">
+        <div class="container form-intro-copy">
+          <p class="breadcrumbs"><a href="./index.html">Home</a> / Preventivo auto</p>
+          <p class="eyebrow">Preventivo online</p>
+          <h1>Richiesta preventivo auto</h1>
+          <p class="lead">
+            Compila il modulo con i dati del proprietario, del veicolo e della situazione assicurativa.
+            Le informazioni servono per elaborare una proposta più precisa e ricontattarti nel minor tempo possibile.
+          </p>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="container">
+          <div class="form-shell">
+            <form
+              name="preventivo-auto"
+              method="POST"
+              action="./grazie.html"
+              enctype="multipart/form-data"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="preventivo-auto" />
+              <p class="hidden">
+                <label>Non compilare questo campo <input name="bot-field" /></label>
+              </p>
+
+              <fieldset class="form-fieldset">
+                <legend class="fieldset-title">Dati del proprietario</legend>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="nome_cognome">Nome e cognome *</label>
+                    <input id="nome_cognome" type="text" name="nome_cognome" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="codice_fiscale">Codice fiscale *</label>
+                    <input id="codice_fiscale" type="text" name="codice_fiscale" required />
+                  </div>
+                  <div class="form-field full">
+                    <label for="indirizzo">Indirizzo *</label>
+                    <input id="indirizzo" type="text" name="indirizzo" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="cap">CAP *</label>
+                    <input id="cap" type="text" name="cap" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="citta">Città *</label>
+                    <input id="citta" type="text" name="citta" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="provincia">Provincia *</label>
+                    <input id="provincia" type="text" name="provincia" maxlength="2" placeholder="Es. RM" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="telefono">Telefono *</label>
+                    <input id="telefono" type="tel" name="telefono" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="email">Email *</label>
+                    <input id="email" type="email" name="email" required />
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset" style="margin-top: 1rem;">
+                <legend class="fieldset-title">Dati del mezzo</legend>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="targa">Targa *</label>
+                    <input id="targa" type="text" name="targa" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="marca">Marca *</label>
+                    <input id="marca" type="text" name="marca" required />
+                  </div>
+                  <div class="form-field full">
+                    <label for="modello">Modello *</label>
+                    <input id="modello" type="text" name="modello" required />
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset" style="margin-top: 1rem;">
+                <legend class="fieldset-title">Situazione assicurativa *</legend>
+                <div class="choice-grid three">
+                  <label class="choice">
+                    <input class="situation" type="radio" name="situazione" value="precedente" required />
+                    <span>
+                      <strong>Polizza in scadenza</strong>
+                      <span>Con altra compagnia assicurativa.</span>
+                    </span>
+                  </label>
+
+                  <label class="choice">
+                    <input class="situation" type="radio" name="situazione" value="bersani" />
+                    <span>
+                      <strong>Nuovo mezzo con Bersani</strong>
+                      <span>Classe acquisita da familiare convivente.</span>
+                    </span>
+                  </label>
+
+                  <label class="choice">
+                    <input class="situation" type="radio" name="situazione" value="rientro" />
+                    <span>
+                      <strong>Rientro veicolo</strong>
+                      <span>Per vendita, rottamazione o furto.</span>
+                    </span>
+                  </label>
+                </div>
+
+                <div class="form-grid" style="margin-top: 1rem;">
+                  <div id="scadenza-field" class="form-field hidden">
+                    <label for="data_scadenza">Data di scadenza precedente assicurazione *</label>
+                    <input id="data_scadenza" type="date" name="data_scadenza" />
+                  </div>
+
+                  <div id="targa-vecchia-field" class="form-field hidden">
+                    <label for="targa_mezzo_venduto">Targa del mezzo cessato *</label>
+                    <input id="targa_mezzo_venduto" type="text" name="targa_mezzo_venduto" />
+                  </div>
+                </div>
+
+                <div id="bersani-fields" class="form-grid hidden" style="margin-top: 1rem;">
+                  <div class="form-field">
+                    <label for="targa_bersani">Targa del familiare convivente *</label>
+                    <input id="targa_bersani" type="text" name="targa_bersani" />
+                  </div>
+                  <div class="form-field">
+                    <label for="nome_proprietario_bersani">Nome e cognome del familiare *</label>
+                    <input id="nome_proprietario_bersani" type="text" name="nome_proprietario_bersani" />
+                  </div>
+                  <div class="form-field">
+                    <label for="data_nascita_bersani">Data di nascita del familiare *</label>
+                    <input id="data_nascita_bersani" type="date" name="data_nascita_bersani" />
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset" style="margin-top: 1rem;">
+                <legend class="fieldset-title">Garanzie aggiuntive</legend>
+                <div class="check-grid two">
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Rc e rivalse" /><span>RC e rivalse</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Guida libera" /><span>Guida libera</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Guida esperta" /><span>Guida esperta</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Incendio e furto" /><span>Incendio e furto</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Cristalli" /><span>Cristalli</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Atti vandalici" /><span>Atti vandalici</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Fenomeni naturali" /><span>Fenomeni naturali</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Collisione" /><span>Collisione</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Kasco" /><span>Kasco</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Assistenza stradale" /><span>Assistenza stradale</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Tutela legale" /><span>Tutela legale</span></label>
+                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Infortuni del conducente" /><span>Infortuni del conducente</span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset" style="margin-top: 1rem;">
+                <legend class="fieldset-title">Pagamento e convenzioni</legend>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="frazionamento">Frazionamento pagamento polizza *</label>
+                    <select id="frazionamento" name="frazionamento" required>
+                      <option value="">Seleziona</option>
+                      <option value="annuale">Annuale</option>
+                      <option value="semestrale">Semestrale</option>
+                      <option value="mensile">Mensile (con IBAN)</option>
+                    </select>
+                  </div>
+
+                  <div id="iban-field" class="form-field hidden">
+                    <label for="iban">IBAN</label>
+                    <input id="iban" type="text" name="iban" />
+                  </div>
+
+                  <div class="form-field full">
+                    <label for="convenzioni">Convenzioni eventuali</label>
+                    <select id="convenzioni" name="convenzioni[]" multiple>
+                      <option>Carabinieri</option>
+                      <option>Esercito</option>
+                      <option>Aeronautica</option>
+                      <option>Marina</option>
+                      <option>Vigili del fuoco</option>
+                      <option>Polizia di Stato</option>
+                      <option>Ministero della Giustizia</option>
+                      <option>Guardia di Finanza</option>
+                      <option>Ministero della Difesa</option>
+                      <option>Touring Club Italiano</option>
+                      <option>Federazione Italiana Tennis</option>
+                      <option>Camperisti</option>
+                      <option>Magistrati</option>
+                      <option>Confcommercio</option>
+                    </select>
+                    <small>Su desktop puoi selezionare più voci tenendo premuto `Cmd` o `Ctrl`.</small>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset" style="margin-top: 1rem;">
+                <legend class="fieldset-title">Allegati e note</legend>
+                <div class="form-grid">
+                  <div class="form-field full">
+                    <label for="libretto-file">Libretto di circolazione *</label>
+                    <input id="libretto-file" type="file" name="libretto_originale" accept="image/*" required />
+                    <small>Il file viene ottimizzato lato browser per facilitare l'invio.</small>
+                  </div>
+                  <div class="form-field full">
+                    <label for="note">Note aggiuntive</label>
+                    <textarea id="note" name="note" placeholder="Inserisci dettagli utili per la valutazione."></textarea>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="form-fieldset" style="margin-top: 1rem;">
+                <legend class="fieldset-title">Privacy</legend>
+                <div class="check-grid">
+                  <label class="check-item">
+                    <input type="checkbox" name="privacy" required />
+                    <span>
+                      <strong>Consenso obbligatorio *</strong>
+                      <span>Autorizzo il trattamento dei dati per la gestione della richiesta di preventivo.</span>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="form-actions" style="margin-top: 1.25rem;">
+                <button class="button button-primary" type="submit">Invia richiesta</button>
+                <a class="button button-secondary" href="./index.html">Torna alla landing</a>
+              </div>
+
+              <p class="form-note" style="margin-top: 1rem;">
+                Contatto diretto agenzia: <a href="tel:+390645582068">+39 06 4558 2068</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const scadenzaField = document.getElementById("scadenza-field");
+      const targaVecchiaField = document.getElementById("targa-vecchia-field");
+      const bersaniFields = document.getElementById("bersani-fields");
+      const ibanField = document.getElementById("iban-field");
+      const situationInputs = document.querySelectorAll(".situation");
+      const frazionamento = document.getElementById("frazionamento");
+      const dataScadenza = document.getElementById("data_scadenza");
+      const targaMezzoVenduto = document.getElementById("targa_mezzo_venduto");
+      const targaBersani = document.getElementById("targa_bersani");
+      const nomeProprietarioBersani = document.getElementById("nome_proprietario_bersani");
+      const dataNascitaBersani = document.getElementById("data_nascita_bersani");
+      const ibanInput = document.getElementById("iban");
+
+      function toggleSituationFields(value) {
+        scadenzaField.classList.toggle("hidden", value !== "precedente");
+        targaVecchiaField.classList.toggle("hidden", value !== "rientro");
+        bersaniFields.classList.toggle("hidden", value !== "bersani");
+
+        dataScadenza.required = value === "precedente";
+        targaMezzoVenduto.required = value === "rientro";
+        targaBersani.required = value === "bersani";
+        nomeProprietarioBersani.required = value === "bersani";
+        dataNascitaBersani.required = value === "bersani";
+      }
+
+      situationInputs.forEach((input) => {
+        input.addEventListener("change", () => toggleSituationFields(input.value));
+      });
+
+      frazionamento.addEventListener("change", function () {
+        ibanField.classList.toggle("hidden", this.value !== "mensile");
+        ibanInput.required = this.value === "mensile";
+      });
+
+      document.getElementById("libretto-file").addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (!file || !file.type.startsWith("image/")) {
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = new Image();
+          img.onload = function () {
+            const maxSide = 1600;
+            const scale = Math.min(maxSide / img.width, maxSide / img.height, 1);
+            const newWidth = Math.round(img.width * scale);
+            const newHeight = Math.round(img.height * scale);
+
+            const canvas = document.createElement("canvas");
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+
+            const ctx = canvas.getContext("2d");
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = "high";
+            ctx.drawImage(img, 0, 0, newWidth, newHeight);
+
+            canvas.toBlob(
+              function (blob) {
+                if (!blob) {
+                  return;
+                }
+
+                const compressedFile = new File([blob], file.name.replace(/\.\w+$/, "") + ".jpg", {
+                  type: "image/jpeg",
+                  lastModified: Date.now()
+                });
+
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(compressedFile);
+                event.target.files = dataTransfer.files;
+              },
+              "image/jpeg",
+              0.75
+            );
+          };
+
+          img.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      });
+    </script>
+  </body>
+</html>
