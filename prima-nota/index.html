@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="it">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invio prima nota</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef3f2;color:#17352e;font:16px system-ui,sans-serif;padding:7vh 1rem}main{max-width:34rem;margin:auto;background:white;padding:clamp(1.25rem,5vw,2.5rem);border-radius:1rem;box-shadow:0 1rem 3rem #1232}h1{margin:0;font-size:2rem}p{color:#43564f}label{display:block;font-weight:650;margin:1.25rem 0}input{display:block;width:100%;margin-top:.4rem;padding:.7rem;border:1px solid #8b9f98;border-radius:.5rem;font:inherit}button{background:#174c3e;color:white;border:0;border-radius:.55rem;padding:.85rem 1.25rem;font:inherit;font-weight:700;cursor:pointer;width:100%}
+</style>
+<main>
+<h1>Invio prima nota</h1>
+<p>Carica i tre documenti della giornata. Limite complessivo di 15 MB.</p>
+<form method="post" action="/" enctype="multipart/form-data">
+<label>Data della prima nota<input type="date" name="data" required></label>
+<label>Prima nota Excel<input type="file" name="excel" accept=".xlsx" required></label>
+<label>Movimenti bancari<input type="file" name="banca" accept=".pdf" required></label>
+<label>Schede contabili Zucchetti<input type="file" name="zucchetti" accept=".pdf" required></label>
+<button>Invia documenti</button>
+</form>
+</main>
+</html>
