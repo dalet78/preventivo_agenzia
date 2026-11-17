@@ -49,41 +49,166 @@
               netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="preventivo-auto" />
+
               <p class="hidden">
-                <label>Non compilare questo campo <input name="bot-field" /></label>
+                <label>
+                  Non compilare questo campo
+                  <input name="bot-field" />
+                </label>
               </p>
 
               <fieldset class="form-fieldset">
                 <legend class="fieldset-title">Dati del proprietario</legend>
+
                 <div class="form-grid">
                   <div class="form-field">
                     <label for="nome_cognome">Nome e cognome *</label>
                     <input id="nome_cognome" type="text" name="nome_cognome" required />
                   </div>
+
                   <div class="form-field">
                     <label for="codice_fiscale">Codice fiscale *</label>
                     <input id="codice_fiscale" type="text" name="codice_fiscale" required />
                   </div>
+
                   <div class="form-field full">
                     <label for="indirizzo">Indirizzo *</label>
                     <input id="indirizzo" type="text" name="indirizzo" required />
                   </div>
+
                   <div class="form-field">
                     <label for="cap">CAP *</label>
                     <input id="cap" type="text" name="cap" required />
                   </div>
+
                   <div class="form-field">
                     <label for="citta">Città *</label>
                     <input id="citta" type="text" name="citta" required />
                   </div>
+                  
                   <div class="form-field">
                     <label for="provincia">Provincia *</label>
-                    <input id="provincia" type="text" name="provincia" maxlength="2" placeholder="Es. RM" required />
+                    <select id="provincia" name="provincia" required>
+                      <option value="">Seleziona la provincia</option>
+                      <option value="AG">Agrigento (AG)</option>
+                      <option value="AL">Alessandria (AL)</option>
+                      <option value="AN">Ancona (AN)</option>
+                      <option value="AO">Aosta (AO)</option>
+                      <option value="AR">Arezzo (AR)</option>
+                      <option value="AP">Ascoli Piceno (AP)</option>
+                      <option value="AT">Asti (AT)</option>
+                      <option value="AV">Avellino (AV)</option>
+                      <option value="BA">Bari (BA)</option>
+                      <option value="BT">Barletta-Andria-Trani (BT)</option>
+                      <option value="BL">Belluno (BL)</option>
+                      <option value="BN">Benevento (BN)</option>
+                      <option value="BG">Bergamo (BG)</option>
+                      <option value="BI">Biella (BI)</option>
+                      <option value="BO">Bologna (BO)</option>
+                      <option value="BZ">Bolzano (BZ)</option>
+                      <option value="BS">Brescia (BS)</option>
+                      <option value="BR">Brindisi (BR)</option>
+                      <option value="CA">Cagliari (CA)</option>
+                      <option value="CL">Caltanissetta (CL)</option>
+                      <option value="CB">Campobasso (CB)</option>
+                      <option value="CE">Caserta (CE)</option>
+                      <option value="CT">Catania (CT)</option>
+                      <option value="CZ">Catanzaro (CZ)</option>
+                      <option value="CH">Chieti (CH)</option>
+                      <option value="CO">Como (CO)</option>
+                      <option value="CS">Cosenza (CS)</option>
+                      <option value="CR">Cremona (CR)</option>
+                      <option value="KR">Crotone (KR)</option>
+                      <option value="CN">Cuneo (CN)</option>
+                      <option value="EN">Enna (EN)</option>
+                      <option value="FM">Fermo (FM)</option>
+                      <option value="FE">Ferrara (FE)</option>
+                      <option value="FI">Firenze (FI)</option>
+                      <option value="FG">Foggia (FG)</option>
+                      <option value="FC">Forlì-Cesena (FC)</option>
+                      <option value="FR">Frosinone (FR)</option>
+                      <option value="OT">Gallura Nord-Est Sardegna (OT)</option>
+                      <option value="GE">Genova (GE)</option>
+                      <option value="GO">Gorizia (GO)</option>
+                      <option value="GR">Grosseto (GR)</option>
+                      <option value="IM">Imperia (IM)</option>
+                      <option value="IS">Isernia (IS)</option>
+                      <option value="SP">La Spezia (SP)</option>
+                      <option value="AQ">L'Aquila (AQ)</option>
+                      <option value="LT">Latina (LT)</option>
+                      <option value="LE">Lecce (LE)</option>
+                      <option value="LC">Lecco (LC)</option>
+                      <option value="LI">Livorno (LI)</option>
+                      <option value="LO">Lodi (LO)</option>
+                      <option value="LU">Lucca (LU)</option>
+                      <option value="MC">Macerata (MC)</option>
+                      <option value="MN">Mantova (MN)</option>
+                      <option value="MS">Massa-Carrara (MS)</option>
+                      <option value="MT">Matera (MT)</option>
+                      <option value="ME">Messina (ME)</option>
+                      <option value="MI">Milano (MI)</option>
+                      <option value="MO">Modena (MO)</option>
+                      <option value="MB">Monza e Brianza (MB)</option>
+                      <option value="NA">Napoli (NA)</option>
+                      <option value="NO">Novara (NO)</option>
+                      <option value="NU">Nuoro (NU)</option>
+                      <option value="OG">Ogliastra (OG)</option>
+                      <option value="OR">Oristano (OR)</option>
+                      <option value="PD">Padova (PD)</option>
+                      <option value="PA">Palermo (PA)</option>
+                      <option value="PR">Parma (PR)</option>
+                      <option value="PV">Pavia (PV)</option>
+                      <option value="PG">Perugia (PG)</option>
+                      <option value="PU">Pesaro e Urbino (PU)</option>
+                      <option value="PE">Pescara (PE)</option>
+                      <option value="PC">Piacenza (PC)</option>
+                      <option value="PI">Pisa (PI)</option>
+                      <option value="PT">Pistoia (PT)</option>
+                      <option value="PN">Pordenone (PN)</option>
+                      <option value="PZ">Potenza (PZ)</option>
+                      <option value="PO">Prato (PO)</option>
+                      <option value="RG">Ragusa (RG)</option>
+                      <option value="RA">Ravenna (RA)</option>
+                      <option value="RC">Reggio Calabria (RC)</option>
+                      <option value="RE">Reggio Emilia (RE)</option>
+                      <option value="RI">Rieti (RI)</option>
+                      <option value="RN">Rimini (RN)</option>
+                      <option value="RM">Roma (RM)</option>
+                      <option value="RO">Rovigo (RO)</option>
+                      <option value="SA">Salerno (SA)</option>
+                      <option value="SS">Sassari (SS)</option>
+                      <option value="SV">Savona (SV)</option>
+                      <option value="SI">Siena (SI)</option>
+                      <option value="SR">Siracusa (SR)</option>
+                      <option value="SO">Sondrio (SO)</option>
+                      <option value="SU">Sulcis Iglesiente (SU)</option>
+                      <option value="TA">Taranto (TA)</option>
+                      <option value="TE">Teramo (TE)</option>
+                      <option value="TR">Terni (TR)</option>
+                      <option value="TO">Torino (TO)</option>
+                      <option value="TP">Trapani (TP)</option>
+                      <option value="TN">Trento (TN)</option>
+                      <option value="TV">Treviso (TV)</option>
+                      <option value="TS">Trieste (TS)</option>
+                      <option value="UD">Udine (UD)</option>
+                      <option value="VA">Varese (VA)</option>
+                      <option value="VE">Venezia (VE)</option>
+                      <option value="VB">Verbano-Cusio-Ossola (VB)</option>
+                      <option value="VC">Vercelli (VC)</option>
+                      <option value="VR">Verona (VR)</option>
+                      <option value="VV">Vibo Valentia (VV)</option>
+                      <option value="VI">Vicenza (VI)</option>
+                      <option value="VT">Viterbo (VT)</option>
+                      <option value="VS">Medio Campidano (VS)</option>
+                    </select>
                   </div>
+
+
                   <div class="form-field">
                     <label for="telefono">Telefono *</label>
                     <input id="telefono" type="tel" name="telefono" required />
                   </div>
+
                   <div class="form-field">
                     <label for="email">Email *</label>
                     <input id="email" type="email" name="email" required />
@@ -93,15 +218,18 @@
 
               <fieldset class="form-fieldset" style="margin-top: 1rem;">
                 <legend class="fieldset-title">Dati del mezzo</legend>
+
                 <div class="form-grid">
                   <div class="form-field">
                     <label for="targa">Targa *</label>
                     <input id="targa" type="text" name="targa" required />
                   </div>
+
                   <div class="form-field">
                     <label for="marca">Marca *</label>
                     <input id="marca" type="text" name="marca" required />
                   </div>
+
                   <div class="form-field full">
                     <label for="modello">Modello *</label>
                     <input id="modello" type="text" name="modello" required />
@@ -111,9 +239,16 @@
 
               <fieldset class="form-fieldset" style="margin-top: 1rem;">
                 <legend class="fieldset-title">Situazione assicurativa *</legend>
+
                 <div class="choice-grid three">
                   <label class="choice">
-                    <input class="situation" type="radio" name="situazione" value="precedente" required />
+                    <input
+                      class="situation"
+                      type="radio"
+                      name="situazione"
+                      value="precedente"
+                      required
+                    />
                     <span>
                       <strong>Polizza in scadenza</strong>
                       <span>Con altra compagnia assicurativa.</span>
@@ -121,7 +256,12 @@
                   </label>
 
                   <label class="choice">
-                    <input class="situation" type="radio" name="situazione" value="bersani" />
+                    <input
+                      class="situation"
+                      type="radio"
+                      name="situazione"
+                      value="bersani"
+                    />
                     <span>
                       <strong>Nuovo mezzo con Bersani</strong>
                       <span>Classe acquisita da familiare convivente.</span>
@@ -129,7 +269,12 @@
                   </label>
 
                   <label class="choice">
-                    <input class="situation" type="radio" name="situazione" value="rientro" />
+                    <input
+                      class="situation"
+                      type="radio"
+                      name="situazione"
+                      value="rientro"
+                    />
                     <span>
                       <strong>Rientro veicolo</strong>
                       <span>Per vendita, rottamazione o furto.</span>
@@ -139,56 +284,143 @@
 
                 <div class="form-grid" style="margin-top: 1rem;">
                   <div id="scadenza-field" class="form-field hidden">
-                    <label for="data_scadenza">Data di scadenza precedente assicurazione *</label>
+                    <label for="data_scadenza">
+                      Data di scadenza precedente assicurazione *
+                    </label>
                     <input id="data_scadenza" type="date" name="data_scadenza" />
                   </div>
 
                   <div id="targa-vecchia-field" class="form-field hidden">
-                    <label for="targa_mezzo_venduto">Targa del mezzo cessato *</label>
-                    <input id="targa_mezzo_venduto" type="text" name="targa_mezzo_venduto" />
+                    <label for="targa_mezzo_venduto">
+                      Targa del mezzo cessato *
+                    </label>
+                    <input
+                      id="targa_mezzo_venduto"
+                      type="text"
+                      name="targa_mezzo_venduto"
+                    />
                   </div>
                 </div>
 
-                <div id="bersani-fields" class="form-grid hidden" style="margin-top: 1rem;">
+                <div
+                  id="bersani-fields"
+                  class="form-grid hidden"
+                  style="margin-top: 1rem;"
+                >
                   <div class="form-field">
-                    <label for="targa_bersani">Targa del familiare convivente *</label>
-                    <input id="targa_bersani" type="text" name="targa_bersani" />
+                    <label for="targa_bersani">
+                      Targa del familiare convivente *
+                    </label>
+                    <input
+                      id="targa_bersani"
+                      type="text"
+                      name="targa_bersani"
+                    />
                   </div>
+
                   <div class="form-field">
-                    <label for="nome_proprietario_bersani">Nome e cognome del familiare *</label>
-                    <input id="nome_proprietario_bersani" type="text" name="nome_proprietario_bersani" />
+                    <label for="nome_proprietario_bersani">
+                      Nome e cognome del familiare *
+                    </label>
+                    <input
+                      id="nome_proprietario_bersani"
+                      type="text"
+                      name="nome_proprietario_bersani"
+                    />
                   </div>
+
                   <div class="form-field">
-                    <label for="data_nascita_bersani">Data di nascita del familiare *</label>
-                    <input id="data_nascita_bersani" type="date" name="data_nascita_bersani" />
+                    <label for="data_nascita_bersani">
+                      Data di nascita del familiare *
+                    </label>
+                    <input
+                      id="data_nascita_bersani"
+                      type="date"
+                      name="data_nascita_bersani"
+                    />
                   </div>
                 </div>
               </fieldset>
 
               <fieldset class="form-fieldset" style="margin-top: 1rem;">
                 <legend class="fieldset-title">Garanzie aggiuntive</legend>
+
                 <div class="check-grid two">
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Rc e rivalse" /><span>RC e rivalse</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Guida libera" /><span>Guida libera</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Guida esperta" /><span>Guida esperta</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Incendio e furto" /><span>Incendio e furto</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Cristalli" /><span>Cristalli</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Atti vandalici" /><span>Atti vandalici</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Fenomeni naturali" /><span>Fenomeni naturali</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Collisione" /><span>Collisione</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Kasco" /><span>Kasco</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Assistenza stradale" /><span>Assistenza stradale</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Tutela legale" /><span>Tutela legale</span></label>
-                  <label class="check-item"><input type="checkbox" name="servizi_aggiuntivi[]" value="Infortuni del conducente" /><span>Infortuni del conducente</span></label>
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Rc e rivalse" />
+                    <span>RC e rivalse</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Guida libera" />
+                    <span>Guida libera</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Guida esperta" />
+                    <span>Guida esperta</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Incendio e furto" />
+                    <span>Incendio e furto</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Cristalli" />
+                    <span>Cristalli</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Atti vandalici" />
+                    <span>Atti vandalici</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Fenomeni naturali" />
+                    <span>Fenomeni naturali</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Collisione" />
+                    <span>Collisione</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Kasco" />
+                    <span>Kasco</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Assistenza stradale" />
+                    <span>Assistenza stradale</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Tutela legale" />
+                    <span>Tutela legale</span>
+                  </label>
+
+                  <label class="check-item">
+                    <input type="checkbox" name="servizi_aggiuntivi[]" value="Infortuni del conducente" />
+                    <span>Infortuni del conducente</span>
+                  </label>
                 </div>
               </fieldset>
 
               <fieldset class="form-fieldset" style="margin-top: 1rem;">
                 <legend class="fieldset-title">Pagamento e convenzioni</legend>
+
                 <div class="form-grid">
                   <div class="form-field">
-                    <label for="frazionamento">Frazionamento pagamento polizza *</label>
-                    <select id="frazionamento" name="frazionamento" required>
+                    <label for="frazionamento">
+                      Frazionamento pagamento polizza *
+                    </label>
+                    <select
+                      id="frazionamento"
+                      name="frazionamento"
+                      required
+                    >
                       <option value="">Seleziona</option>
                       <option value="annuale">Annuale</option>
                       <option value="semestrale">Semestrale</option>
@@ -219,46 +451,76 @@
                       <option>Magistrati</option>
                       <option>Confcommercio</option>
                     </select>
-                    <small>Su desktop puoi selezionare più voci tenendo premuto `Cmd` o `Ctrl`.</small>
+                    <small>
+                      Su desktop puoi selezionare più voci tenendo premuto
+                      Cmd o Ctrl.
+                    </small>
                   </div>
                 </div>
               </fieldset>
 
               <fieldset class="form-fieldset" style="margin-top: 1rem;">
                 <legend class="fieldset-title">Allegati e note</legend>
+
                 <div class="form-grid">
                   <div class="form-field full">
-                    <label for="libretto-file">Libretto di circolazione *</label>
-                    <input id="libretto-file" type="file" name="libretto_originale" accept="image/*" required />
-                    <small>Il file viene ottimizzato lato browser per facilitare l'invio.</small>
+                    <label for="libretto-file">
+                      Libretto di circolazione *
+                    </label>
+                    <input
+                      id="libretto-file"
+                      type="file"
+                      name="libretto_originale"
+                      accept="image/*"
+                      required
+                    />
+                    <small>
+                      L'immagine viene compressa automaticamente prima
+                      dell'invio. Dimensione massima: 300 KB.
+                    </small>
                   </div>
+
                   <div class="form-field full">
                     <label for="note">Note aggiuntive</label>
-                    <textarea id="note" name="note" placeholder="Inserisci dettagli utili per la valutazione."></textarea>
+                    <textarea
+                      id="note"
+                      name="note"
+                      placeholder="Inserisci dettagli utili per la valutazione."
+                    ></textarea>
                   </div>
                 </div>
               </fieldset>
 
               <fieldset class="form-fieldset" style="margin-top: 1rem;">
                 <legend class="fieldset-title">Privacy</legend>
+
                 <div class="check-grid">
                   <label class="check-item">
                     <input type="checkbox" name="privacy" required />
                     <span>
                       <strong>Consenso obbligatorio *</strong>
-                      <span>Autorizzo il trattamento dei dati per la gestione della richiesta di preventivo.</span>
+                      <span>
+                        Autorizzo il trattamento dei dati per la gestione
+                        della richiesta di preventivo.
+                      </span>
                     </span>
                   </label>
                 </div>
               </fieldset>
 
               <div class="form-actions" style="margin-top: 1.25rem;">
-                <button class="button button-primary" type="submit">Invia richiesta</button>
-                <a class="button button-secondary" href="./index.html">Torna alla landing</a>
+                <button class="button button-primary" type="submit">
+                  Invia richiesta
+                </button>
+
+                <a class="button button-secondary" href="./index.html">
+                  Torna alla landing
+                </a>
               </div>
 
               <p class="form-note" style="margin-top: 1rem;">
-                Contatto diretto agenzia: <a href="tel:+390645582068">+39 06 4558 2068</a>
+                Contatto diretto agenzia:
+                <a href="tel:+390645582068">+39 06 4558 2068</a>
               </p>
             </form>
           </div>
@@ -267,17 +529,28 @@
     </main>
 
     <script>
+      // ============================================
+      // GESTIONE CAMPI CONDIZIONALI
+      // ============================================
+
       const scadenzaField = document.getElementById("scadenza-field");
       const targaVecchiaField = document.getElementById("targa-vecchia-field");
       const bersaniFields = document.getElementById("bersani-fields");
       const ibanField = document.getElementById("iban-field");
+
       const situationInputs = document.querySelectorAll(".situation");
       const frazionamento = document.getElementById("frazionamento");
+
       const dataScadenza = document.getElementById("data_scadenza");
       const targaMezzoVenduto = document.getElementById("targa_mezzo_venduto");
       const targaBersani = document.getElementById("targa_bersani");
-      const nomeProprietarioBersani = document.getElementById("nome_proprietario_bersani");
-      const dataNascitaBersani = document.getElementById("data_nascita_bersani");
+
+      const nomeProprietarioBersani =
+        document.getElementById("nome_proprietario_bersani");
+
+      const dataNascitaBersani =
+        document.getElementById("data_nascita_bersani");
+
       const ibanInput = document.getElementById("iban");
 
       function toggleSituationFields(value) {
@@ -287,68 +560,240 @@
 
         dataScadenza.required = value === "precedente";
         targaMezzoVenduto.required = value === "rientro";
+
         targaBersani.required = value === "bersani";
         nomeProprietarioBersani.required = value === "bersani";
         dataNascitaBersani.required = value === "bersani";
       }
 
       situationInputs.forEach((input) => {
-        input.addEventListener("change", () => toggleSituationFields(input.value));
+        input.addEventListener("change", () => {
+          toggleSituationFields(input.value);
+        });
       });
 
       frazionamento.addEventListener("change", function () {
-        ibanField.classList.toggle("hidden", this.value !== "mensile");
-        ibanInput.required = this.value === "mensile";
+        const isMonthly = this.value === "mensile";
+
+        ibanField.classList.toggle("hidden", !isMonthly);
+        ibanInput.required = isMonthly;
       });
 
-      document.getElementById("libretto-file").addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (!file || !file.type.startsWith("image/")) {
+
+      // ============================================
+      // COMPRESSIONE IMMAGINE LIBRETTO
+      // ============================================
+
+      const librettoInput = document.getElementById("libretto-file");
+      const librettoForm = librettoInput.form;
+      const submitButton = librettoForm.querySelector(
+        'button[type="submit"]'
+      );
+
+      const MAX_SIDE = 1200;
+      const TARGET_SIZE = 300 * 1024;
+      const JPEG_QUALITIES = [0.60, 0.50, 0.40];
+
+      let compressionPromise = Promise.resolve();
+      let compressionReady = false;
+      let fileSelectionVersion = 0;
+      let submitting = false;
+
+      function encodeJpeg(canvas, quality) {
+        return new Promise((resolve, reject) => {
+          canvas.toBlob(
+            (blob) => {
+              if (blob && blob.type === "image/jpeg") {
+                resolve(blob);
+              } else {
+                reject(new Error("Compressione JPEG non supportata."));
+              }
+            },
+            "image/jpeg",
+            quality
+          );
+        });
+      }
+
+      librettoInput.addEventListener("change", function () {
+        const input = this;
+        const originalFile = input.files[0];
+        const version = ++fileSelectionVersion;
+
+        compressionReady = false;
+
+        if (!originalFile) {
+          compressionPromise = Promise.resolve();
           return;
         }
 
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = new Image();
-          img.onload = function () {
-            const maxSide = 1600;
-            const scale = Math.min(maxSide / img.width, maxSide / img.height, 1);
-            const newWidth = Math.round(img.width * scale);
-            const newHeight = Math.round(img.height * scale);
+        compressionPromise = (async () => {
+          if (!originalFile.type.startsWith("image/")) {
+            throw new Error("Seleziona un'immagine valida.");
+          }
+
+          const bitmap = await createImageBitmap(originalFile);
+
+          try {
+            const scale = Math.min(
+              MAX_SIDE / bitmap.width,
+              MAX_SIDE / bitmap.height,
+              1
+            );
 
             const canvas = document.createElement("canvas");
-            canvas.width = newWidth;
-            canvas.height = newHeight;
+
+            canvas.width = Math.max(
+              1,
+              Math.round(bitmap.width * scale)
+            );
+
+            canvas.height = Math.max(
+              1,
+              Math.round(bitmap.height * scale)
+            );
 
             const ctx = canvas.getContext("2d");
+
+            if (!ctx) {
+              throw new Error("Impossibile elaborare l'immagine.");
+            }
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
             ctx.imageSmoothingEnabled = true;
             ctx.imageSmoothingQuality = "high";
-            ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
-            canvas.toBlob(
-              function (blob) {
-                if (!blob) {
-                  return;
-                }
-
-                const compressedFile = new File([blob], file.name.replace(/\.\w+$/, "") + ".jpg", {
-                  type: "image/jpeg",
-                  lastModified: Date.now()
-                });
-
-                const dataTransfer = new DataTransfer();
-                dataTransfer.items.add(compressedFile);
-                event.target.files = dataTransfer.files;
-              },
-              "image/jpeg",
-              0.75
+            ctx.drawImage(
+              bitmap,
+              0,
+              0,
+              canvas.width,
+              canvas.height
             );
-          };
 
-          img.src = e.target.result;
-        };
+            let blob = null;
 
-        reader.readAsDataURL(file);
+            for (const quality of JPEG_QUALITIES) {
+              blob = await encodeJpeg(canvas, quality);
+
+              if (blob.size <= TARGET_SIZE) {
+                break;
+              }
+            }
+
+            if (!blob || blob.size > TARGET_SIZE) {
+              throw new Error(
+                "Impossibile ridurre l'immagine sotto 300 KB. " +
+                "Prova con una fotografia più semplice."
+              );
+            }
+
+            // Se l'utente ha scelto un altro file,
+            // non sovrascrivere la nuova selezione.
+            if (version !== fileSelectionVersion) {
+              return;
+            }
+
+            const compressedFile = new File(
+              [blob],
+              originalFile.name.replace(/\.[^.]+$/, "") + ".jpg",
+              {
+                type: "image/jpeg",
+                lastModified: Date.now()
+              }
+            );
+
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(compressedFile);
+
+            input.files = dataTransfer.files;
+            compressionReady = true;
+
+            console.log(
+              "Libretto originale:",
+              (originalFile.size / 1024).toFixed(1),
+              "KB"
+            );
+
+            console.log(
+              "Libretto compresso:",
+              (compressedFile.size / 1024).toFixed(1),
+              "KB"
+            );
+
+            console.log(
+              "Riduzione:",
+              (
+                (1 - compressedFile.size / originalFile.size) * 100
+              ).toFixed(1) + "%"
+            );
+
+          } finally {
+            bitmap.close();
+          }
+        })().catch((error) => {
+          if (version !== fileSelectionVersion) {
+            return;
+          }
+
+          compressionReady = false;
+          input.value = "";
+
+          alert(
+            error.message +
+            "\n\nVerifica che il libretto sia leggibile."
+          );
+        });
+      });
+
+
+      // ============================================
+      // INVIO FORM DOPO COMPRESSIONE
+      // ============================================
+
+      librettoForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        if (submitting) {
+          return;
+        }
+
+        submitting = true;
+
+        const originalButtonText = submitButton.textContent;
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Preparazione documento...";
+
+        try {
+          await compressionPromise;
+
+          if (!compressionReady || !librettoInput.files.length) {
+            throw new Error(
+              "Carica un'immagine valida del libretto."
+            );
+          }
+
+          if (!librettoForm.reportValidity()) {
+            return;
+          }
+
+          submitButton.textContent = "Invio in corso...";
+
+          // Invio nativo: conserva multipart/form-data
+          // e l'allegato compresso.
+          HTMLFormElement.prototype.submit.call(librettoForm);
+
+        } catch (error) {
+          alert(error.message);
+
+        } finally {
+          submitting = false;
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
       });
     </script>
   </body>
