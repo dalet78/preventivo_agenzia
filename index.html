@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/richiesta-preventivo-auto" />
-    <title>Richiesta preventivo auto</title>
+    <title>Preventivi e appuntamenti</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .home-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        gap: 1rem;
+        min-height: 100svh;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <a href="/richiesta-preventivo-auto">Apri il modulo di preventivo auto</a>
+    <main class="home-actions">
+      <a class="button button-primary" href="/richiesta-preventivo-auto">Preventivo auto</a>
+      <a class="button button-primary" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1JVovS4WQvVLFFd-npOG5YL4R7qlGIkAk1HcGAoAe1Z8vyazlM85cUrTwxW8vZeDjuqI_s-gnk" target="_blank" rel="noopener noreferrer">Prenota un appuntamento</a>
+    </main>
   </body>
 </html>
